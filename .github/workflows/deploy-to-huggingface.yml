@@ -14,13 +14,13 @@ jobs:
         with:
           fetch-depth: 0
           lfs: true
-      
+
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.11'
-          cache: 'pip'
-      
+          python-version: "3.11"
+          cache: "pip"
+
       - name: Config git
         run: |
           git config --global credential.helper store
@@ -43,8 +43,8 @@ jobs:
           SPACE_NAME: ${{ secrets.SPACE_NAME }}
         run: |
           # Create repository URL
-          REPO_URL="https://huggingface.co/spaces/$HF_USERNAME/template-python"
-          
+          REPO_URL="https://huggingface.co/spaces/$HF_USERNAME/llm-image"
+
           # Add Hugging Face as a remote and push
           git remote add space $REPO_URL || git remote set-url space $REPO_URL
           git push -f space main
