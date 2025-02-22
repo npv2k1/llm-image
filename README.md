@@ -1,5 +1,5 @@
 ---
-title: Python Project Template
+title: LLM Image
 emoji: 🟧
 colorFrom: yellow
 colorTo: purple
